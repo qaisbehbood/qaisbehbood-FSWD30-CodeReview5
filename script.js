@@ -1,33 +1,33 @@
 var john = {
-	name: "John",
-	surname:"Doe",
+	name: "Ahmad",
+	surname:"Delroba",
 	age:28,
 	favoritePerformers: ["Justin Timberlake", "Ed Sheeran", "Emma Watson"],
-	image: "img/boy1.jpg",  
+	image: "img/ahmad.jpg",  
 	likes: 0,
 };
 var Jennifer = {
-	name: "Jennifer",
-	surname:"Smith",
+	name: "Ali",
+	surname:"Shawqi",
 	age:25,
 	favoritePerformers: ["Justin Timberlake", "Ed Sheeran", "Emma Watson"],
 	image: "img/girl1.jpg",  
 	likes: 0,
 };
 var Brian  = {
-	name: "Brian",
-	surname:"Adams",
+	name: "Laila",
+	surname:"Ahmadi",
 	age:35,
 	favoritePerformers: ["Justin Timberlake", "Ed Sheeran", "Emma Watson"],
-	image: "img/boy2.jpg",  
+	image: "img/ali.jpg",  
 	likes: 0,
 };
 var Beyonce = {
-	name: "Beyonce",
-	surname:"Secret",
+	name: "Dragan",
+	surname:"Dragana",
 	age:27,
 	favoritePerformers: ["Justin Timberlake", "Ed Sheeran", "Emma Watson"],
-	image: "img/girl2.jpg",  
+	image: "img/sada.jpg",  
 	likes: 0,
 };
 var persons = [
@@ -36,8 +36,6 @@ var persons = [
 	Brian,
 	Beyonce,			
 ];	
-
-// Ids of the <span>s to be updated
 var spanArray = [
 	"boy1span",
 	"girl1span",
@@ -47,7 +45,7 @@ var spanArray = [
 
 function incrementLikes(index) {
 	persons[index].likes = persons[index].likes + 1;   
-	document.getElementById(spanArray[index]).innerHTML=" " + persons[index].likes + "	&hearts;";
+	document.getElementById(spanArray[index]).innerHTML=" " + persons[index].likes + "	tanx for like";
 }
 
 function writeInfoToDocument(index) {
@@ -58,14 +56,14 @@ function writeInfoToDocument(index) {
 function writeInfoToSpans() {
 	for (index = 0; index <4; index++) { 
     	writeInfoToSpan(index);
-    	document.getElementById(spanArray[index]).innerHTML=" " + persons[index].likes + "	&hearts;";
+    	document.getElementById(spanArray[index]).innerHTML=" " + persons[index].likes + "	tanx for like";
 	}
 }
 
 function writeInfoToSpan(index) {
-	document.getElementById("part"+index).innerHTML =  " Name: " + persons[index].name + "<br>" 
-		+ " Surname: " + persons[index].surname              + "<br>"
-		+ " Age: " + persons[index].age              + "<br>";
+	document.getElementById("part"+index).innerHTML =  " Name= " + persons[index].name + " " 
+		+ " Surname= " + persons[index].surname              + " "
+		+ " Age= " + persons[index].age              ;
 }
 
 function sortPersonen() {
@@ -78,7 +76,7 @@ function sortPersonen() {
 	document.getElementById("src2").src = persons[2].image; 
 	document.getElementById("href3").href = persons[3].image; 
 	document.getElementById("src3").src = persons[3].image; 
-	writeInfoToSpans();
+	
 	
 }
 
